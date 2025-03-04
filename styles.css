@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --primary-font-family: "Rubik";
+  --font-400: 400;
+  --font-500: 500;
+  --font-700: 700;
+}
+
+.tracker {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--primary-font-family);
+  font-size: 18px;
+}
+
+.tracker_phase-top {
+  height: 40vh;
+  background: url("/images/pattern-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tracker_phase-map {
+  height: 60vh;
+  width: 100%;
+}
+
+.tracker_phase-details {
+  position: absolute;
+  width: 100%;
+  padding: 3rem;
+  z-index: 1;
+
+  & h2 {
+    color: var(--white);
+    text-align: center;
+  }
+}
+
+.search_ip-address {
+  margin: 0.9rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .input_ip {
+    background-color: var(--white);
+    width: 85%;
+    padding: 1rem;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+  }
+
+  & .icon-arrow {
+    background-color: var(--black);
+    padding: 1.05rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.search_ip-address-response {
+  background-color: var(--white);
+  box-shadow: 1px 0.5px 3px rgba(169, 169, 169, 0.502);
+  border-radius: 10px;
+  padding: 1rem 0;
+  margin: 0.4rem 0;
+  text-align: center;
+
+  & .response-title {
+    color: var(--dark-gray);
+    font-weight: var(--font-700);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2.3px;
+    padding: 0.5rem 0;
+  }
+
+  & .response-value {
+    font-weight: var(--font-700);
+    font-size: 1.4rem;
+  }
+
+  & .location,
+  .time-zone,
+  .isp {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .search_ip-address {
+    & .input_ip {
+      width: 55%;
+    }
+  }
+
+  .search_ip-address-response {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    margin-top: 3.5rem;
+
+    & .response-value {
+      font-weight: var(--font-700);
+      font-size: 1.4rem;
+    }
+
+    & .location,
+    .time-zone,
+    .isp {
+      margin-top: 0;
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  .search_ip-address {
+    & .input_ip {
+      width: 40%;
+    }
+  }
+  .search_ip-address-response {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    margin-top: 3.8rem;
+
+    & .response-value {
+      font-weight: var(--font-700);
+      font-size: 1.4rem;
+    }
+
+    & .location,
+    .time-zone,
+    .isp {
+      margin-top: 0;
+    }
+  }
+}

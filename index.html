@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+    <title>IP Address Tracker</title>
+  </head>
+
+  <body>
+    <div class="tracker">
+      <div class="tracker_phase-top"></div>
+      <div class="tracker_phase-map"></div>
+
+      <section class="tracker_phase-details">
+        <h2>IP Address Tracker</h2>
+
+        <!-- search bar -->
+        <div class="search_ip-address">
+          <input type="text" class="input_ip" />
+          <img
+            src="images/icon-arrow.svg"
+            alt="icon-arrow"
+            class="icon-arrow"
+          />
+        </div>
+
+        <!-- details display bar -->
+        <div class="search_ip-address-response">
+          <div class="ip-address">
+            <h3 class="response-title">ip address</h3>
+            <p class="response-value ip"></p>
+          </div>
+
+          <div class="location">
+            <h3 class="response-title">location</h3>
+            <p class="response-value locationDisplay"></p>
+          </div>
+
+          <div class="time-zone">
+            <h3 class="response-title">timezone</h3>
+            <p class="response-value timezone"></p>
+          </div>
+
+          <div class="isp">
+            <h3 class="response-title">isp</h3>
+            <p class="response-value ispDisplay"></p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="ipTrack.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  </body>
+</html>
